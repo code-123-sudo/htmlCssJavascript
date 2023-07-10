@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+	<body>
+		<div show-info="name"></div>
+		<div show-info="age"></div>
+		<script>
+			let user = {
+				name : 'Shishir',
+				age : 29
+			}
+			for ( let div of document.querySelectorAll('[show-info]')){
+				let field = div.getAttribute('show-info')
+				div.innerHTML = user[field]	
+			}
+		</script>
+	</body>
+</html>
