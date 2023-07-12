@@ -37,12 +37,61 @@
 
     // we can use more complex notation inside square brackets
     let fruit3 = 'apple';
-    let bag = {
+    let bag3 = {
     	[fruit3 + 'Computers']: 5
     }
     // Square brackets are much more powerful than .notation 
     //  they allow any properties names and variables. But they are also more cumbersomne to write.
     //So most of the time. when property names are known and simple, the dot is used. And if we need something more complex , then we switch to square brackets
+
+
+    // In real code we often use existing variables as values
+    // for properties name
+    function makeUser(name,age){
+    	return {
+    		name : name,
+    		age : age
+    	}
+    }
+     
+     let user4 = makeUser("John",30);
+     alert(user4.name);
+
+     //common use case
+     function makeUser2(name2,age2){
+     	return {
+     		name2,
+     		age2,
+     	}
+     }
+
+
+     // Property existence test in operator
+     // non existing property reading there is no error , it returns undefined
+     let user5 = {};
+     alert(user5.noSuchProperty === 'undefined')
+     let user6 = {
+     	name : "John",
+     	age : 30
+     }
+     alert("age" in user6);
+     alert("blabla" in user);
+
+     //Please note that on the left side of in , avriable 
+     // may exist
+     let key7 = "age";
+     alert(key7 in user)
+
+     // if an property exists but stores undefined
+     // for in loop
+
+
+
+
+
+
+
+
 </script>
 <body>
 	 	<!-- <input type = "button" value = "Click me" onclick = "showAlert();" /> -->
