@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+// an empty object or cabinet
+function showAlert(){
+	let user = new Object();
+    user = {};
+
+    user = {
+	  name : "John",
+	  age: 30
+    }
+
+	alert(user.name);
+	alert(user.age);
+
+	delete user.age;
+
+	let user = {
+		name: "John",
+		age: 30,
+		"likes birds": true,
+	}
+	// doesnot work user.likes birds = true
+    // only works with identifiers
+}
+showAlert();
+</script>
+<body>
+	 	<!-- <input type = "button" value = "Click me" onclick = "showAlert();" /> -->
+</body>
+
+</html>
