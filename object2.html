@@ -21,6 +21,19 @@
 	};
 	let key3 = "name";
 	alert(user3.key3)
+    // we can use square brackets in an object literal
+    // when creating an object. Thats called computed properties
+    let fruit = prompt("Which fruit to buy?", "apple");
+    let bag = {
+    	[fruit] : 5,
+    }
+    alert(bag.apple)
+    // it works same as
+    let fruit2 = prompt("which fruit to buy");
+    let bag2 = {};
+    bag2[fruit2] = 5;
+    alert(bag2["grapes"]);
+    alert(bag2[fruit2]);
 
 </script>
 <body>
