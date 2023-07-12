@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<script>
+    let user = { name: "John" };
+
+let permissions1 = { canView: true };
+let permissions2 = { canEdit: true };
+
+// copies all properties from permissions1 and permissions2 into user
+Object.assign(user, permissions1, permissions2);
+
+// now user = { name: "John", canView: true, canEdit: true }
+alert(user.name); // John
+alert(user.canView); // true
+alert(user.canEdit); // true
+
+// no nested refrences copying, use structuredClone but no function copying, use _.deepCloning
+</script>
+<body></body>
+</html>
